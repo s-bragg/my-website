@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>BREKKER</title>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #0f0f10;
+      color: white;
+      font-family: Consolas, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* HEADER */
+    .header {
+      margin-top: 120px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 64px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .red {
+      color: #ff3b3b;
+    }
+
+    /* CONTENT SECTION */
+    .section {
+      margin-top: 100px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      max-width: 900px;
+    }
+
+    .image {
+      width: 200px;
+      height: 200px;
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .text {
+      flex: 1;
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-family: Consolas, monospace;
+      background-color: transparent;
+      border: 1px solid #555;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      border-color: #ff3b3b;
+      color: #ff3b3b;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="title">
+      BRE<span>KK</span>ER
+    </div>
+
+    <div class="subtitle">
+      Schreib- und Korrekturservices
+    </div>
+  </div>
+
+  <!-- SECTION -->
+  <div class="section">
+
+    <div class="image">
+      Bild
+    </div>
+
+    <div class="text">
+      blabla
+    </div>
+
+    <div class="buttons">
+      <button>Angebot</button>
+      <button>Kontakt</button>
+    </div>
+
+  </div>
+
+  <script>
+    // zweites "K" in BREKKER rot
+    const title = document.querySelector(".title");
+    title.innerHTML = title.innerHTML.replace(
+      "KK",
+      "<span class='red'>K</span>K"
+    );
+
+    // nur zweites "r" in Korrekturservices rot
+    const subtitle = document.querySelector(".subtitle");
+    subtitle.innerHTML = subtitle.innerHTML.replace(
+      "Korrekturservices",
+      "Korrekturse<span class='red'>r</span>vices"
+    );
+  </script>
+
+</body>
+</html>
