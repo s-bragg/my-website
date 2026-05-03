@@ -2,12 +2,12 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>BREKKER</title>
+  <title>BRAEGGER</title>
 
   <style>
     body {
       margin: 0;
-      background-color: #0f0f10;
+      background-color: #141414;
       color: white;
       font-family: Consolas, monospace;
       display: flex;
@@ -15,7 +15,6 @@
       align-items: center;
     }
 
-    /* HEADER */
     .header {
       margin-top: 120px;
       text-align: center;
@@ -37,7 +36,6 @@
       color: #ff3b3b;
     }
 
-    /* CONTENT SECTION */
     .section {
       margin-top: 100px;
       display: flex;
@@ -60,7 +58,7 @@
     .text {
       flex: 1;
       font-size: 16px;
-      color: #ccc;
+      color: #e6e6e6;
     }
 
     .buttons {
@@ -90,21 +88,23 @@
 
   <!-- HEADER -->
   <div class="header">
+
+    <!-- BRAEGGER: 2. G ist rot -->
     <div class="title">
-      BRE<span>KK</span>ER
+      BRAEG<span class="red">G</span>ER
     </div>
 
+    <!-- Korrekturservices: 2. r ist rot -->
     <div class="subtitle">
-      Schreib- und Korrekturservices
+      Schreib- und Kor<span class="red">r</span>ekturservices
     </div>
+
   </div>
 
   <!-- SECTION -->
   <div class="section">
 
-    <div class="image">
-      Bild
-    </div>
+    <img src="Bild-1.jpg" alt="Bild 1" style="width:200px; height:200px; object-fit:cover;">
 
     <div class="text">
       blabla
@@ -116,22 +116,6 @@
     </div>
 
   </div>
-
-  <script>
-    // zweites "K" in BREKKER rot
-    const title = document.querySelector(".title");
-    title.innerHTML = title.innerHTML.replace(
-      "KK",
-      "<span class='red'>K</span>K"
-    );
-
-    // nur zweites "r" in Korrekturservices rot
-    const subtitle = document.querySelector(".subtitle");
-    subtitle.innerHTML = subtitle.innerHTML.replace(
-      "Korrekturservices",
-      "Korrekturse<span class='red'>r</span>vices"
-    );
-  </script>
 
 </body>
 </html>
