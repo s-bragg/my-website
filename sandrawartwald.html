@@ -46,7 +46,6 @@
     .placeholder {
       color: #aaaaaa;
       text-align: justify; /* erzwingt Blocksatz */
-      hyphens: auto;        /* automatische Silbentrennung */
     }
 
     a {
@@ -90,7 +89,11 @@
 }
 
 .text {
-  max-width: 800px;
+    text-align: justify;
+    text-align-last: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
   }
 
     footer {
