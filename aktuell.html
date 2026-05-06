@@ -40,8 +40,18 @@
     }
 
     .block {
-      margin-bottom: 40px;
-    }
+  display: flex;
+  flex-direction: column; /* Stapelt Bild und Text untereinander */
+  align-items: center;    /* Zentriert horizontal */
+  gap: 15px;              /* Abstand zwischen Bild und Link */
+  margin-bottom: 40px;
+}
+
+.block img {
+  width: 80%;       /* Groß, aber responsive */
+  max-width: 600px; /* Nicht zu groß auf Desktop */
+  height: auto;
+}
 
     .placeholder {
       color: #aaaaaa;
@@ -70,8 +80,10 @@
 
     @media (max-width: 768px) {
   .block {
-    flex-direction: column;
-  }
+  flex-direction: column;   /* Bild und Link untereinander */
+  align-items: center;      /* horizontal zentriert */
+  gap: 15px;                /* Abstand zwischen Bild und Link */
+}
 
   .block img {
     width: 100%;
@@ -107,7 +119,7 @@
     <h1>Aktuell</h1>
 
     <div class="block">
-  <img src="Flyer.png" alt="Buch1">
+  <img src="Flyer.png" alt="Flyer">
 
     <p>
       <a href="index.html">← Zurück zur Startseite</a>
